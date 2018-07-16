@@ -1,5 +1,5 @@
 {
-  "name": "rpscript-api-beeper",
+  "name": "@typecasting/rpscript-api-beeper",
   "version": "0.1.1",
   "description": "RPScript API for beeper",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "beeper": "^1.1.1",
-    "rpscript-interface": "^0.5.3"
+    "rpscript-interface": "^0.6.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.4",

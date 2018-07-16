@@ -9,9 +9,9 @@ m.describe('Beeper', () => {
   m.it('should beeps', async function () {
     let m = new RPSBeeper;
 
-    // await m.beep(new RpsContext,{});
+    await m.beep(new RpsContext,{});
     await m.beep(new RpsContext,{},3);
-    // await m.beep(new RpsContext,{},"****-*-*");
+    await m.beep(new RpsContext,{},"****-*-*");
     
 
   }).timeout(0);
