@@ -24,7 +24,9 @@ export default class RPSBeeper {
  * 
 */
   @rpsAction({verbName:'beep'})
-  async beep (ctx:RpsContext,opts:{}, countOrMelody?:string|number) : Promise<void>{
-    beeper(countOrMelody);
+  beep (ctx:RpsContext,opts:{}, countOrMelody?:string|number) : Promise<void>{
+    return new Promise((resolve,reject)=>{
+      beeper(countOrMelody,resolve);
+    });
   }
 }
