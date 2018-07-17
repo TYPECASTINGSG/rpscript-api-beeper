@@ -1,7 +1,8 @@
 import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 var beeper = require('beeper');
 
-/** Module for Beeper
+/** Make your terminal beep. Useful for grabbing attention.
+ * @see {@link https://www.npmjs.com/package/beeper|Beeper}
  * @namespace Beeper
 */
 @RpsModule("beeper")
@@ -11,14 +12,15 @@ export default class RPSBeeper {
  * @function beep
  * @memberof Beeper
  * @example
- * //print 'Hello'
- * console-log 'Hello'
- * //print 'Hello' again
- * console-log $RESULT
- * @param {string|number} countOrMelody count or melody.
- * @returns {void} Doesn't return anything
- * @summary Making beep sound
- * @description Making beep sound
+ * ;Beep once
+ * beep
+ * ;Beeps 3 times 
+ * beep 3
+ * ;Beeps with melody
+ * beep "***-**-*"
+ * @param {string|number} countOrMelody count or melody string.
+ * @returns {void} 
+ * @summary Make beep sound
  * 
  * @see {@link https://www.npmjs.com/package/beeper}
  * 
