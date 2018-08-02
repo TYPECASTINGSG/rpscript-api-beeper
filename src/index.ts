@@ -1,4 +1,4 @@
-import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
+import {RpsContext,RpsModule,rpsAction,R} from 'rpscript-interface';
 var beeper = require('beeper');
 
 /** Make your terminal beep. Useful for grabbing attention.
@@ -26,9 +26,7 @@ export default class RPSBeeper {
  * 
 */
   @rpsAction({verbName:'beep'})
-  beep (ctx:RpsContext,opts:{}, countOrMelody?:string|number) : Promise<void>{
-    return new Promise((resolve,reject)=>{
-      beeper(countOrMelody,resolve);
-    });
+  async beep (ctx:RpsContext,opts:{}, countOrMelody?:string|number) : Promise<void|Function>{
+    return countOrMelody ? beeper(countOrMelody) : beeper;
   }
 }
