@@ -4,6 +4,10 @@ var beeper = require('beeper');
 /** Make your terminal beep. Useful for grabbing attention.
  * @see {@link https://www.npmjs.com/package/beeper|Beeper}
  * @namespace Beeper
+ * 
+ * @example
+ * rps install beeper
+ * 
 */
 @RpsModule("beeper")
 export default class RPSBeeper {
@@ -12,17 +16,13 @@ export default class RPSBeeper {
  * @function beep
  * @memberof Beeper
  * @example
- * ;Beep once
- * beep
  * ;Beeps 3 times 
  * beep 3
  * ;Beeps with melody
  * beep "***-**-*"
  * @param {string|number} countOrMelody count or melody string.
- * @returns {void} 
- * @summary Make beep sound
+ * @summary String|Number → void
  * 
- * @see {@link https://www.npmjs.com/package/beeper}
  * 
 */
   @rpsAction({verbName:'beep'})
